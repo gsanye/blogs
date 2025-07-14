@@ -13,25 +13,29 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: gsanye' blog
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+  personal tech blogs
+twitter_username: gsanye
+github_username: gsanye
+minimal_mistakes_skin: dark
 search: true
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://gsanye.gihut.io" # the base hostname & protocol for your site, e.g. http://example.com
+
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+encoding: utf-8
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
 
 include:
   - _pages
@@ -58,9 +62,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "Ge SkyWalker"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "May the Force be with you."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -86,6 +90,33 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
+
+# file path as blog
+collections:
+  tech:
+    output: true
+    permalink: /tech/:path/
+  tech_algorithm:
+    output: true
+    permalink: /tech/algorithm/:path/
+  tech_java:
+    output: true
+    permalink: /tech/java/:path/
+  tech_python:
+    output: true
+    permalink: /tech/python/:path/
+  tech_spring:
+    output: true
+    permalink: /tech/spring/:path/
+  tech_ai:
+    output: true
+    permalink: /tech/ai/:path/
+  life:
+    output: true
+    permalink: /life/:path/
+  life_travel:
+    output: true
+    permalink: /life/travel/:path/
 
 defaults:
   # _posts
