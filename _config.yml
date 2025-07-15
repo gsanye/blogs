@@ -29,6 +29,8 @@ url: "https://gsanye.gihut.io" # the base hostname & protocol for your site, e.g
 markdown: kramdown
 highlighter: rouge
 encoding: utf-8
+toc: true
+toc_sticky: true
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
@@ -60,6 +62,30 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-archives
+
+archivers:
+  category:
+    layout: archive-category
+    path: /categories
+  tag:
+    layout: archive-tag
+    path: /tags
+jekyll-archives:
+  enabled: all
+  layout: archive
+  layouts:
+    year: year-archive
+    month: month-archive
+    day: day-archive
+    category: category-archive
+    tag: tag-archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 author:
   name   : "Ge SkyWalker"
